@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body
+        {
+            background-image: url(https://scontent.fdel1-2.fna.fbcdn.net/v/t1.0-9/123087363_720807448523687_257143221352135669_o.jpg?_nc_cat=104&ccb=2&_nc_sid=730e14&_nc_ohc=ZFoOCHq0TZwAX8PXDwR&_nc_ht=scontent.fdel1-2.fna&oh=52d6a56eec9a88acc2b4fec2aa35d97c&oe=5FBEB248);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            padding: 0px;
+            color: white;
+            
+        }
+        .te
+        {
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 12px;
+            border: 2px solid white;
+            width: 80%;
+            resize: none;
+            height: 224px;
+            margin: auto;
+            margin-top: 5%;
+            
+        }
+        input:focus
+        {
+            outline: none;
+        }
+        input
+        {
+            width: 98%;
+            height: 200px;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            background-color:transparent;
+            color: white;
+            font-weight: bolder;
+            
+
+        }
+        
+        
+    
+        .primary-btn
+        {
+            display: block;
+            
+            font-family: 'roboto';
+        background-color: rgba(255,255,0,0.6);
+        color: white;
+        padding: 12px 8px;
+        height: 20px;
+        display: block;
+        border: 1px solid white;
+        font-weight: 300px;
+        height: 40px;
+        width: 40%;
+        margin: auto;
+            margin-top: 2%;
+        border-radius: 12px;
+        transition: all 0.5s;
+            
+        }
+        .primary-btn:hover
+    {
+        background-color: rgba(0,0,0,0.4);
+
+        
+    }
+        .o
+        {
+            border-radius:12px;
+            width: 80%;
+            display: block;
+            margin: auto;
+            margin-top: 4%;
+            border: 2px solid white;
+            padding: 12px;
+            font-weight: bold;
+            font-size:18px;
+            background-color: rgba(0,0,0,0.4);
+        }
+   ::placeholder
+   {
+       color: wheat;
+   }
+   ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color:red;
+}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="{{ 'index' }}">HOME</a></li>
+      <li><a href="{{ 'forum' }}">COMMUNITY FORUM</a></li>
+      <li><a href="{{ 'wikip' }}">SEARCH</a></li>
+      <li style="float:right; background-color:red;"><a class="active" href="{{ 'logout' }}">LOGOUT</a></li>
+    </ul>
+
+    <div class="con">
+        <H1 style="text-align: center">COMMUNITY FORUM</H1>
+        <form method="POST"action="">
+            {% csrf_token %}
+            {% for field in form4 %}
+    <div class="te">
+        {{ field }}
+    </div>
+    {% endfor %}
+    <div class="btn">
+    <input  class="primary-btn"  type="submit">
+    </div>
+    </div>
+
+<br>
+<br>
+<br>
+
+
+
+
+</body>
+</html>

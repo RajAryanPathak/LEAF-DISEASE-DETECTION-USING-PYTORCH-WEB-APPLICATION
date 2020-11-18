@@ -1,0 +1,163 @@
+
+<img src = {{filePathName}}>
+{{ filePathName }}
+{{ fig }}
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+    <style>
+        .myFile::-webkit-file-upload-button {
+  visibility: hidden;
+}
+        body
+	      {
+            background-image: url(https://scontent.fdel1-2.fna.fbcdn.net/v/t1.0-9/123087363_720807448523687_257143221352135669_o.jpg?_nc_cat=104&ccb=2&_nc_sid=730e14&_nc_ohc=ZFoOCHq0TZwAX8PXDwR&_nc_ht=scontent.fdel1-2.fna&oh=52d6a56eec9a88acc2b4fec2aa35d97c&oe=5FBEB248);
+            background-size: 100%;
+            background-repeat: repeat-y;
+            padding: 0px;
+            color: white;
+	      }
+        .ffff
+        {
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            border: 2px solid white;
+            width: 50%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .con
+        {
+            font-weight: bolder;
+            margin: auto;
+            margin-top: 40px;
+            display: block;
+            width: 60%;
+            text-align: center;
+        }
+         .primary-btn
+            {
+                display: block;
+                
+                font-family: 'roboto';
+            background-color: rgba(255,255,0,0.6);
+            color: white;
+            padding: 12px 8px;
+            height: 20px;
+            display: block;
+            border: 1px solid white;
+            font-weight: 300px;
+            height: 40px;
+            width: 20%;
+            margin: auto;
+                margin-top: 2%;
+            border-radius: 12px;
+            transition: all 0.5s;
+                
+            }
+            .primary-btn:hover
+        {
+            background-color: rgba(0,0,0,0.4);
+
+            
+        }
+        .primary-btn:hover:focus
+        {
+            outline: none;
+        }
+        a{
+            
+        display: block;
+        text-align: center;
+        color: red;
+        text-decoration: none;
+        
+        }
+.myFile {
+  content: 'Select some files';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.myFile:hover::before {
+  border-color: black;
+}
+.myFile:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: red;
+}
+
+    </style>
+<body>
+    <ul>
+    <li><a href="{{ 'index' }}">HOME</a></li>
+  <li><a href="{{ 'forum' }}">COMMUNITY FORUM</a></li>
+  <li><a href="{{ 'wikip' }}">SEARCH</a></li>
+  <li style="float:right; background-color:red;"><a class="active" href="{{ 'logout' }}">LOGOUT</a></li>
+</ul>
+
+  <div class="ffff">
+<div class="con">
+    
+<form method="POST" enctype="multipart/form-data" action="predictimage">
+        {% csrf_token %}
+        <p>Select a file to upload:</p><br>
+        
+       
+        <input class="myFile" id="myFile" type="file" name="filepath">
+        <input class="primary-btn" type="submit" value="submit">
+        </form>
+    
+
+</div>
+
+<p style="text-align: center;"><b>Click here to find the disease in leaves</b></p>
+
+  </div>
+<p id="demo"></p>
+</div>
+</body>
+
+
+</body>
+</html>

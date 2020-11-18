@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>SIGN UP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body
+        {
+            font-family: 'roboto';
+            font-weight: 300;
+            background-color: black;
+            color: white;
+            overflow: hidden;
+        }
+        #wrapper
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        #left
+        {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+        }
+        
+        
+        #signin
+        {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+        }
+        #signin form
+        {
+            text-align: center;
+            width: 70%;
+            padding: 8px;
+        }
+        .logo
+        {
+            margin: 8px;
+        }
+        .logo > img
+        {
+            border-radius: 50%;
+            width: 80px;
+        }
+        #signin label
+        {
+            
+            display: block;
+            margin-bottom: 9px;
+            font-size: 19px;
+            line-height: 19px;
+            font-weight: 500px;
+        }
+        #signin [type='text'],#signin [type='password'],#signin [type='email']
+        {
+            width: 70%;
+            background-color: black;
+            color: #fdffd4;
+            border: 2px solid transparent;
+            border-bottom: 2px solid #fdffd4;
+            font-size: 15px;
+            line-height: 29px;
+            font-weight: 500px;
+            text-align: center;
+            
+            margin-bottom: 13px;
+        }
+        #signin [type='text']:focus,#signin [type='password']:focus
+        {
+            outline: none;
+        }
+        #right
+        {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+        }
+        
+        /* MEDIA QUERY*/
+        @media(min-width:1200px)
+        {
+            #left
+            {
+                flex: 4;
+            }
+            #right
+            {
+                flex: 6;
+            }
+        }
+        
+        .primary-btn
+        {
+            font-family: 'roboto';
+            
+            color: white;
+            background-color: transparent;
+            padding: 12px 8px;
+            height: 20px;
+            display: block;
+            border: 1px solid white;
+            font-weight: 300px;
+            height: 40px;
+            width: 70%;
+            margin: auto;
+            border-radius: 12px;
+            transition: all 0.5s;
+        }
+        .primary-btn:hover
+        {
+            opacity: 0.7;
+            
+        }
+        #signin .links a
+        {
+            margin: 12px;
+            display: block;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            
+        }
+        .or 
+        {
+            width: 100%;
+            display: flex;
+        }
+        .bar-r
+        {
+            width: 80%;
+            margin-right:12px;
+            margin-left:4px;
+            background-color: white;
+        }
+        .bar-l
+        {
+            width: 80%;
+            margin-left: 12px;
+            margin-right: 4px;
+            background-color: white;
+        }
+        .end > p
+        {
+            text-align: center;
+        }
+        #signin  .lin  
+        {
+            margin: auto;
+            margin-bottom: 12px;
+            
+            text-align: center;
+            
+            
+        }
+        #signin  .lin  a
+        {
+            color: orange;
+            text-decoration: none;
+            
+            
+        }
+        #showcase
+        {
+            background: url(https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1907&q=80);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            background-color: rebeccapurple;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .showcase-text
+        {
+            margin-bottom: 400px;
+        }
+    </style>
+</head>
+<body>
+     <div id="wrapper">
+            <div id="left">
+                <div id="signin">
+                    <div style="text-align: center;" class="logo">
+                        <img src="https://i.ibb.co/LSh0qjN/download.png" alt="logo">
+                        <p style="text-align: center;"> LEAF DISEASE DETECTION  </p>
+                    </div>
+                    <form id="f" method="post" action="">
+                        {% csrf_token %}
+                        <div>
+                            <label for="name">NAME</label>
+                        <input type="text" name="username">
+                        </div>
+                        
+                        <div>
+                            <label for="pass">PASSWORD</label>
+                            <input type="password" name="password">
+                        </div>
+                        
+                        <button type="submit" class="primary-btn" name="login_user">LOG IN</button>
+                        
+                    </form>
+                    <p id="oo"></p>
+                    <div class="links">
+                        <a href="#">Forgot Password</a>
+                        <a href="{{ 'signup' }}">Dont Have A account?<br>Sign in with company or School</a>
+                    </div>
+                    <div class="or">
+                        <hr class="bar-l">
+                    <span>OR</span><hr class="bar-r">
+                    </div>
+                    <div class="end" id="end">
+                    <p>Copyright &copy; 2020, Made by RAJ ARYAN PATHAK</p>
+                        <div class="lin">
+                            <a href="#">terms of use</a> |
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div id="showcase">
+                    <div class="showcase-content">
+                        <h1 class="showcase-text">Let's create the futrue
+                        <strong>together</strong></h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+	 
+ 
+</body>
+</html>
