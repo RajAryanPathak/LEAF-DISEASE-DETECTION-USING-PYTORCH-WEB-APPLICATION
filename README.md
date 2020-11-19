@@ -12,12 +12,12 @@ pip install wikipedia<br>
 pip install Django
 ***
 
-<img src="/imagejob/a.png" alt=""/>
-<img src="/imagejob/b.png" alt=""/>
-<img src="/imagejob/c.png" alt=""/>
-<img src="/imagejob/d.png" alt=""/>
-<img src="/imagejob/e.png" alt=""/>
-<img src="/imagejob/f.png" alt=""/>
-<img src="/imagejob/g.png" alt=""/>
-<img src="/imagejob/h.png" alt=""/>
-<img src="/imagejob/i.png" alt=""/>
+<img src="/images disease detection/a.png" alt=""/>
+<img src="/images disease detection/b.png" alt=""/>
+<img src="/images disease detection/c.png" alt=""/>
+<img src="/images disease detection/d.png" alt=""/>
+<img src="/images disease detection/e.png" alt=""/>
+<img src="/images disease detection/f.png" alt=""/>
+<img src="/images disease detection/g.png" alt=""/>
+<img src="/images disease detection/h.png" alt=""/>
+<img src="/images disease detection/i.png" alt=""/>
