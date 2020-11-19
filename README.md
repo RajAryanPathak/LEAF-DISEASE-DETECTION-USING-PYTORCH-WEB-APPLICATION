@@ -8,7 +8,7 @@ Leaf disease detection web application (model used resnet 152, dataset used - Pl
 
 Libraries Used
 ---
-pip install wikipedia
+pip install wikipedia<br>
 pip install Django
 ***
 
